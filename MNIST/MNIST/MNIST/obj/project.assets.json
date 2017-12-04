@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "ILGPU/0.2.0": {
+      "ILGPU/0.2.1": {
         "type": "package",
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "4.4.0"
@@ -218,17 +218,17 @@
     }
   },
   "libraries": {
-    "ILGPU/0.2.0": {
-      "sha512": "RKjLJe1YpQhRZSViJyKhSa4fJaqjdDjpUjWwiSuc4A3FXDizR2DSRfNfkxm/YHJwCnDR59aO1/8ITAljDKWlAQ==",
+    "ILGPU/0.2.1": {
+      "sha512": "QOc3EmwD1dDrQXIkK1hX/zBr+XmSpoWNUIT2vCJqkNPw0LuFV9EfvJMrGy6/39R/LMipi/mGPCWGzU6259daeA==",
       "type": "package",
-      "path": "ilgpu/0.2.0",
+      "path": "ilgpu/0.2.1",
       "files": [
         "LICENSE-3RD-PARTY.txt",
         "LICENSE.txt",
         "build/ILGPU.targets",
         "build/X64/Windows/ILGPU_LLVM.dll",
         "build/X86/Windows/ILGPU_LLVM.dll",
-        "ilgpu.0.2.0.nupkg.sha512",
+        "ilgpu.0.2.1.nupkg.sha512",
         "ilgpu.nuspec",
         "lib/net46/Debug/ILGPU.dll",
         "lib/net46/Debug/ILGPU.xml",
@@ -721,7 +721,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "ILGPU >= 0.2.0",
+      "ILGPU >= 0.2.1",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
   },
@@ -771,7 +771,7 @@
         "dependencies": {
           "ILGPU": {
             "target": "Package",
-            "version": "0.2.0"
+            "version": "0.2.1"
           },
           "Microsoft.NETCore.App": {
             "target": "Package",

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using VI.Neural.Factory;
 using VI.Neural.LossFunction;
 using VI.Neural.Node;
 using VI.NumSharp;
@@ -13,7 +14,7 @@ namespace MNIST
         static void Main(string[] args)
         {
             var rd = new Random();
-            var values = new[] { .3f, .000f };
+            var values = new[] { .1f, .000f };
 
             var watch = System.Diagnostics.Stopwatch.StartNew();
 
@@ -22,31 +23,34 @@ namespace MNIST
             watch.Stop();
             Console.WriteLine($"Device Time: {watch.ElapsedMilliseconds}ms");
 
-            var hiddens = new LayerBuilder(15, 784, values[0])
+            var hiddens = new LayerCreator(30, 784)
+                .WithLearningRate(values[0])
+                .FullSynapse(.01f)
                 .Supervised()
-                .WithSigmoid()
+                .DenseLayer()
+                .WithLeakRelu()
+                .WithSgd()
                 .Hidden()
-                .WithSGD()
-                .WithMomentum(values[1])
-                .FullSynapse()
                 .Build();
 
-            var hiddens2 = new LayerBuilder(10, 15, values[0])
+            var hiddens2 = new LayerCreator(10, 30)
+                .WithLearningRate(values[0])
+                .FullSynapse(.01f)
                 .Supervised()
-                .WithSigmoid()
+                .DenseLayer()
+                .WithLeakRelu()
+                .WithSgd()
                 .Hidden()
-                .WithSGD()
-                .WithMomentum(values[1])
-                .FullSynapse()
                 .Build();
 
-            var outputs = new LayerBuilder(10, 10, values[0])
+            var outputs = new LayerCreator(10, 10)
+                .WithLearningRate(values[0])
+                .FullSynapse(.01f)
                 .Supervised()
+                .DenseLayer()
                 .WithSigmoid()
+                .WithSgd()
                 .Output()
-                .WithSGD()
-                .WithMomentum(values[1])
-                .FullSynapse()
                 .Build();
 
             var loss = new SquareLossFunction();
@@ -55,10 +59,10 @@ namespace MNIST
             watch.Stop();
             Console.WriteLine($"Sinapse Time: {watch.ElapsedMilliseconds}ms");
 
-            var trainingValues = OpenMnist("");
+            var trainingValues = OpenMnist(@"C:\Users\lucas.fernandes\Downloads\Img");
 
             int cont = 0;
-            int sizeTrain = (int)(trainingValues.Count * .9);
+            int sizeTrain = 20;// (int)(trainingValues.Count * .9);
 
             var e = double.MaxValue;
 
@@ -115,7 +119,7 @@ namespace MNIST
                     $"Error: {e} --- TSPS (Training Sample per Second): {Math.Ceiling(1000d / ((double)time / (double)sizeTrain))}";
             }
         }
-             
+
         private static float[] ByteToArray(byte b, int range)
         {
             var f = Convert.ToInt32(b);

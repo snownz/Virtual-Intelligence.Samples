@@ -1,4 +1,5 @@
 ﻿using System;
+using VI.Neural.Factory;
 using VI.Neural.LossFunction;
 using VI.Neural.Node;
 using VI.NumSharp;
@@ -19,31 +20,37 @@ namespace EvenOrOdd
             watch.Stop();
             Console.WriteLine($"Device Time: {watch.ElapsedMilliseconds}ms");
 
-            var hiddens = new LayerBuilder(2, 4, values[0])
-                .Supervised()
-                .WithLeakRelu()
-                .Hidden()
-                .WithSGD()
-                .WithMomentum(values[1])
+            var hiddens = new LayerCreator(2, 4)
+                            .WithLearningRate(values[0])
+                            .WithMomentum(0)
+                            .FullSynapse()
+                            .Supervised()
+                            .DenseLayer()
+                            .WithLeakRelu()
+                            .WithSgd()
+                            .Hidden()
+                            .Build();
+
+            var hiddens2 = new LayerCreator(2, 2)
+                .WithLearningRate(values[0])
+                .WithMomentum(0)
                 .FullSynapse()
+                .Supervised()
+                .DenseLayer()
+                .WithLeakRelu()
+                .WithSgd()
+                .Hidden()
                 .Build();
 
-            var hiddens2 = new LayerBuilder(2, 2, values[0])
-                .Supervised()
-                .WithLeakRelu()
-                .Hidden()
-                .WithSGD()
-                .WithMomentum(values[1])
+            var outputs = new LayerCreator(2, 2)
+                .WithLearningRate(values[0])
+                .WithMomentum(0)
                 .FullSynapse()
-                .Build();
-
-            var outputs = new LayerBuilder(2, 2, values[0])
                 .Supervised()
+                .DenseLayer()
                 .WithSigmoid()
+                .WithSgd()
                 .Output()
-                .WithSGD()
-                .WithMomentum(values[1])
-                .FullSynapse()
                 .Build();
 
             var loss = new SquareLossFunction();
@@ -115,7 +122,7 @@ namespace EvenOrOdd
                 e = 0;
                 for (int i = 0; i < sizeTrain; i++)
                 {
-                    var index = rd.Next(0, trainingValues.Length);
+                    var index = i;// rd.Next(0, trainingValues.Length);
                     var inputs = trainingValues[index];
                     var desireds = desiredValues[index];
 
