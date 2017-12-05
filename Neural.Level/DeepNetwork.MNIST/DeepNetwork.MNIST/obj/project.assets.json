@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "ILGPU/0.2.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.4.0"
+        },
+        "build": {
+          "build/ILGPU.targets": {}
+        }
+      },
       "Microsoft.NETCore.App/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -196,10 +205,125 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "VI.Maths/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "ILGPU": "0.2.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/VI.Maths.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/VI.Maths.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "VI.Neural/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "ILGPU": "0.2.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.4.0",
+          "VI.Maths": "1.0.0",
+          "VI.NumSharp": "1.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/VI.Neural.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/VI.Neural.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/ILGPU_LLVM.dll": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "VI.NumSharp/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "ILGPU": "0.2.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.4.0",
+          "VI.Maths": "1.0.0",
+          "VI.ParallelComputing": "1.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/VI.NumSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/VI.NumSharp.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "VI.ParallelComputing/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "ILGPU": "0.2.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/VI.ParallelComputing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/VI.ParallelComputing.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
       }
     }
   },
   "libraries": {
+    "ILGPU/0.2.1": {
+      "sha512": "QOc3EmwD1dDrQXIkK1hX/zBr+XmSpoWNUIT2vCJqkNPw0LuFV9EfvJMrGy6/39R/LMipi/mGPCWGzU6259daeA==",
+      "type": "package",
+      "path": "ilgpu/0.2.1",
+      "files": [
+        "LICENSE-3RD-PARTY.txt",
+        "LICENSE.txt",
+        "build/ILGPU.targets",
+        "build/X64/Windows/ILGPU_LLVM.dll",
+        "build/X86/Windows/ILGPU_LLVM.dll",
+        "ilgpu.0.2.1.nupkg.sha512",
+        "ilgpu.nuspec",
+        "lib/net46/Debug/ILGPU.dll",
+        "lib/net46/Debug/ILGPU.xml",
+        "lib/net46/Release/ILGPU.dll",
+        "lib/net46/Release/ILGPU.xml",
+        "lib/netcoreapp2.0/Debug/ILGPU.dll",
+        "lib/netcoreapp2.0/Debug/ILGPU.xml",
+        "lib/netcoreapp2.0/Release/ILGPU.dll",
+        "lib/netcoreapp2.0/Release/ILGPU.xml"
+      ]
+    },
     "Microsoft.NETCore.App/2.0.0": {
       "sha512": "/mzXF+UtZef+VpzzN88EpvFq5U6z4rj54ZMq/J968H6pcvyLOmcupmTRpJ3CJm8ILoCGh9WI7qpDdiKtuzswrQ==",
       "type": "package",
@@ -656,11 +780,82 @@
         "netstandard.library.2.0.0.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.4.0": {
+      "sha512": "9dLLuBxr5GNmOfl2jSMcsHuteEg32BEfUotmmUkmZjpR3RpVHE8YQwt0ow3p6prwA1ME8WqDVZqrr8z6H8G+Kw==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/4.4.0",
+      "files": [
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.4.4.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "VI.Maths/1.0.0": {
+      "sha512": "M0aEmVIKMqkHOPvtBm0bjbBlEeQTj3U+KQBSYMVJzIiUXNX72WVFEmyYBmnhG9MMKWkfutmNY99X31fvSmIJ8Q==",
+      "type": "package",
+      "path": "vi.maths/1.0.0",
+      "files": [
+        "content/ILGPU_LLVM.dll",
+        "contentFiles/any/netstandard2.0/ILGPU_LLVM.dll",
+        "lib/netstandard2.0/VI.Maths.dll",
+        "vi.maths.1.0.0.nupkg.sha512",
+        "vi.maths.nuspec"
+      ]
+    },
+    "VI.Neural/1.0.0": {
+      "sha512": "kfy8zT42mckpyF/+bXFsXDM/JjZuGFG3y1lmt7kecnmDsQsmIwtgi5nvbeHb1D4eBf4rpjHMgFwC3WGVcqk8Bw==",
+      "type": "package",
+      "path": "vi.neural/1.0.0",
+      "files": [
+        "content/ILGPU_LLVM.dll",
+        "contentFiles/any/netstandard2.0/ILGPU_LLVM.dll",
+        "lib/netstandard2.0/VI.Neural.dll",
+        "vi.neural.1.0.0.nupkg.sha512",
+        "vi.neural.nuspec"
+      ]
+    },
+    "VI.NumSharp/1.0.0": {
+      "sha512": "OsKeXW4vffn9CXehMS52d5b+HLebnEjS4/JBHi534QDQf6bcqD3Fsk6Fa3NoaOqgCHilncXhgW3+m/oYwOpd5Q==",
+      "type": "package",
+      "path": "vi.numsharp/1.0.0",
+      "files": [
+        "content/ILGPU_LLVM.dll",
+        "contentFiles/any/netstandard2.0/ILGPU_LLVM.dll",
+        "lib/netstandard2.0/VI.NumSharp.dll",
+        "vi.numsharp.1.0.0.nupkg.sha512",
+        "vi.numsharp.nuspec"
+      ]
+    },
+    "VI.ParallelComputing/1.0.0": {
+      "sha512": "pCQ1NrPdMxV8hAMpJG3hOiCs/Ex1i7XAMRmyB12519yfS0oHfOEgUdrejSKxuWcv0bY2VCo5jc2skfBgp7UB+g==",
+      "type": "package",
+      "path": "vi.parallelcomputing/1.0.0",
+      "files": [
+        "content/ILGPU_LLVM.dll",
+        "contentFiles/any/netstandard2.0/ILGPU_LLVM.dll",
+        "lib/netstandard2.0/VI.ParallelComputing.dll",
+        "vi.parallelcomputing.1.0.0.nupkg.sha512",
+        "vi.parallelcomputing.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "Microsoft.NETCore.App >= 2.0.0"
+      "ILGPU >= 0.2.1",
+      "Microsoft.NETCore.App >= 2.0.0",
+      "VI.Neural >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -707,10 +902,18 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "ILGPU": {
+            "target": "Package",
+            "version": "0.2.1"
+          },
           "Microsoft.NETCore.App": {
             "target": "Package",
             "version": "2.0.0",
             "autoReferenced": true
+          },
+          "VI.Neural": {
+            "target": "Package",
+            "version": "1.0.0"
           }
         },
         "imports": [

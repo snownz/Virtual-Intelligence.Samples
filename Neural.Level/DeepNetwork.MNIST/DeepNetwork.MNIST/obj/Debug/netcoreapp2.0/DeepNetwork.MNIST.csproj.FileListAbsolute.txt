@@ -9,3 +9,7 @@ C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\DeepNetwork.MNIST\D
 C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\DeepNetwork.MNIST\DeepNetwork.MNIST\obj\Debug\netcoreapp2.0\DeepNetwork.MNIST.AssemblyInfo.cs
 C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\DeepNetwork.MNIST\DeepNetwork.MNIST\obj\Debug\netcoreapp2.0\DeepNetwork.MNIST.dll
 C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\DeepNetwork.MNIST\DeepNetwork.MNIST\obj\Debug\netcoreapp2.0\DeepNetwork.MNIST.pdb
+C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\DeepNetwork.MNIST\DeepNetwork.MNIST\bin\Debug\netcoreapp2.0\X86\Windows\ILGPU_LLVM.dll
+C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\DeepNetwork.MNIST\DeepNetwork.MNIST\bin\Debug\netcoreapp2.0\X64\Windows\ILGPU_LLVM.dll
+C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\DeepNetwork.MNIST\DeepNetwork.MNIST\bin\Debug\netcoreapp2.0\ILGPU.dll
+C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\DeepNetwork.MNIST\DeepNetwork.MNIST\bin\Debug\netcoreapp2.0\ILGPU.xml
