@@ -10,7 +10,7 @@ namespace DeepNetwork.MNIST
         static void Main(string[] args)
         {
             var rd = new Random();
-            var values = new[] { .1f, .000f };
+            var values = new[] { .01f, .000f };
 
             var watch = System.Diagnostics.Stopwatch.StartNew();
 
