@@ -12,16 +12,16 @@
 
   <ItemGroup>
     <Reference Include="VI.Maths">
-      <HintPath>..\..\..\..\VI\VI\VI.Neural\bin\Release\netstandard2.0\VI.Maths.dll</HintPath>
+      <HintPath>..\..\..\..\IV\Virtual-Intelligence\VI\VI.Neural\bin\x64\Release\netstandard2.0\VI.Maths.dll</HintPath>
     </Reference>
     <Reference Include="VI.Neural">
-      <HintPath>..\..\..\..\VI\VI\VI.Neural\bin\Release\netstandard2.0\VI.Neural.dll</HintPath>
+      <HintPath>..\..\..\..\IV\Virtual-Intelligence\VI\VI.Neural\bin\x64\Release\netstandard2.0\VI.Neural.dll</HintPath>
     </Reference>
     <Reference Include="VI.NumSharp">
-      <HintPath>..\..\..\..\VI\VI\VI.Neural\bin\Release\netstandard2.0\VI.NumSharp.dll</HintPath>
+      <HintPath>..\..\..\..\IV\Virtual-Intelligence\VI\VI.Neural\bin\x64\Release\netstandard2.0\VI.NumSharp.dll</HintPath>
     </Reference>
     <Reference Include="VI.ParallelComputing">
-      <HintPath>..\..\..\..\VI\VI\VI.Neural\bin\Release\netstandard2.0\VI.ParallelComputing.dll</HintPath>
+      <HintPath>..\..\..\..\IV\Virtual-Intelligence\VI\VI.Neural\bin\x64\Release\netstandard2.0\VI.ParallelComputing.dll</HintPath>
     </Reference>
   </ItemGroup>
 

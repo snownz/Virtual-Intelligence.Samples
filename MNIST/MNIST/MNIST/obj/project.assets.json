@@ -726,7 +726,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lucas.fernandes\\.nuget\\packages\\": {},
+    "C:\\Users\\lucas\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -735,17 +735,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\lucas.fernandes\\Documents\\VI\\Virtual-Intelligence.Samples\\MNIST\\MNIST\\MNIST\\MNIST.csproj",
+      "projectUniqueName": "C:\\Projects\\Virtual-Intelligence.Samples\\MNIST\\MNIST\\MNIST\\MNIST.csproj",
       "projectName": "MNIST",
-      "projectPath": "C:\\Users\\lucas.fernandes\\Documents\\VI\\Virtual-Intelligence.Samples\\MNIST\\MNIST\\MNIST\\MNIST.csproj",
-      "packagesPath": "C:\\Users\\lucas.fernandes\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucas.fernandes\\Documents\\VI\\Virtual-Intelligence.Samples\\MNIST\\MNIST\\MNIST\\obj\\",
+      "projectPath": "C:\\Projects\\Virtual-Intelligence.Samples\\MNIST\\MNIST\\MNIST\\MNIST.csproj",
+      "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\Virtual-Intelligence.Samples\\MNIST\\MNIST\\MNIST\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\lucas.fernandes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

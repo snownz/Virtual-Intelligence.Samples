@@ -18,7 +18,7 @@ namespace MNIST
 
             var watch = System.Diagnostics.Stopwatch.StartNew();
 
-            ProcessingDevice.Device = Device.CPU;
+            ProcessingDevice.Device = Device.CUDA;
 
             watch.Stop();
             Console.WriteLine($"Device Time: {watch.ElapsedMilliseconds}ms");
@@ -47,8 +47,8 @@ namespace MNIST
                 .WithLearningRate(values[0])
                 .FullSynapse(.01f)
                 .Supervised()
-                .DenseLayer()
-                .WithSigmoid()
+                .SoftmaxLayer()
+                .Nothing()
                 .WithSgd()
                 .Output()
                 .Build();
@@ -59,7 +59,7 @@ namespace MNIST
             watch.Stop();
             Console.WriteLine($"Sinapse Time: {watch.ElapsedMilliseconds}ms");
 
-            var trainingValues = OpenMnist(@"C:\Users\lucas.fernandes\Downloads\Img");
+            var trainingValues = OpenMnist(@"C:\Dataset");
 
             int cont = 0;
             int sizeTrain = 20;// (int)(trainingValues.Count * .9);
@@ -104,7 +104,27 @@ namespace MNIST
                     // Error
                     var e0 = Math.Abs(_o[0] - desireds[0]);
                     var e1 = Math.Abs(_o[1] - desireds[1]);
-                    var error = Math.Sqrt(Math.Abs(e0 * e0 + e1 * e0));
+                    var e2 = Math.Abs(_o[2] - desireds[2]);
+                    var e3 = Math.Abs(_o[3] - desireds[3]);
+                    var e4 = Math.Abs(_o[4] - desireds[4]);
+                    var e5 = Math.Abs(_o[5] - desireds[5]);
+                    var e6 = Math.Abs(_o[6] - desireds[6]);
+                    var e7 = Math.Abs(_o[7] - desireds[7]);
+                    var e8 = Math.Abs(_o[8] - desireds[8]);
+                    var e9 = Math.Abs(_o[9] - desireds[9]);
+
+                    var error 
+                        = Math.Sqrt( Math.Abs( e0 * e0 +
+                                               e1 * e1 +
+                                               e2 * e2 +
+                                               e3 * e3 +
+                                               e4 * e4 +
+                                               e5 * e5 +
+                                               e6 * e6 +
+                                               e7 * e7 +
+                                               e8 * e8 +
+                                               e9 * e9 
+                                             ));
                     e += error / 2.0;
                 }
 
