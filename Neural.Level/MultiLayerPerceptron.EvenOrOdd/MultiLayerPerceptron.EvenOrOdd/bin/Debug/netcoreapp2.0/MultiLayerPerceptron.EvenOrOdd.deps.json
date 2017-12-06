@@ -1,0 +1,130 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "4aec2e3d116d0aeb899726b40ca90a8098b1f5c8"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "MultiLayerPerceptron.EvenOrOdd/1.0.0": {
+        "dependencies": {
+          "ILGPU": "0.2.1",
+          "VI.Neural": "1.0.0",
+          "ILGPU.Reference": "0.2.1.0"
+        },
+        "runtime": {
+          "MultiLayerPerceptron.EvenOrOdd.dll": {}
+        }
+      },
+      "ILGPU/0.2.1": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.4.0"
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "VI.Maths/1.0.0": {
+        "dependencies": {
+          "ILGPU": "0.2.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/VI.Maths.dll": {}
+        }
+      },
+      "VI.Neural/1.0.0": {
+        "dependencies": {
+          "ILGPU": "0.2.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.4.0",
+          "VI.Maths": "1.0.0",
+          "VI.NumSharp": "1.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/VI.Neural.dll": {}
+        }
+      },
+      "VI.NumSharp/1.0.0": {
+        "dependencies": {
+          "ILGPU": "0.2.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.4.0",
+          "VI.Maths": "1.0.0",
+          "VI.ParallelComputing": "1.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/VI.NumSharp.dll": {}
+        }
+      },
+      "VI.ParallelComputing/1.0.0": {
+        "dependencies": {
+          "ILGPU": "0.2.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/VI.ParallelComputing.dll": {}
+        }
+      },
+      "ILGPU.Reference/0.2.1.0": {
+        "runtime": {
+          "ILGPU.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MultiLayerPerceptron.EvenOrOdd/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ILGPU/0.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QOc3EmwD1dDrQXIkK1hX/zBr+XmSpoWNUIT2vCJqkNPw0LuFV9EfvJMrGy6/39R/LMipi/mGPCWGzU6259daeA==",
+      "path": "ilgpu/0.2.1",
+      "hashPath": "ilgpu.0.2.1.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9dLLuBxr5GNmOfl2jSMcsHuteEg32BEfUotmmUkmZjpR3RpVHE8YQwt0ow3p6prwA1ME8WqDVZqrr8z6H8G+Kw==",
+      "path": "system.runtime.compilerservices.unsafe/4.4.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.4.0.nupkg.sha512"
+    },
+    "VI.Maths/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-M0aEmVIKMqkHOPvtBm0bjbBlEeQTj3U+KQBSYMVJzIiUXNX72WVFEmyYBmnhG9MMKWkfutmNY99X31fvSmIJ8Q==",
+      "path": "vi.maths/1.0.0",
+      "hashPath": "vi.maths.1.0.0.nupkg.sha512"
+    },
+    "VI.Neural/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kfy8zT42mckpyF/+bXFsXDM/JjZuGFG3y1lmt7kecnmDsQsmIwtgi5nvbeHb1D4eBf4rpjHMgFwC3WGVcqk8Bw==",
+      "path": "vi.neural/1.0.0",
+      "hashPath": "vi.neural.1.0.0.nupkg.sha512"
+    },
+    "VI.NumSharp/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OsKeXW4vffn9CXehMS52d5b+HLebnEjS4/JBHi534QDQf6bcqD3Fsk6Fa3NoaOqgCHilncXhgW3+m/oYwOpd5Q==",
+      "path": "vi.numsharp/1.0.0",
+      "hashPath": "vi.numsharp.1.0.0.nupkg.sha512"
+    },
+    "VI.ParallelComputing/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pCQ1NrPdMxV8hAMpJG3hOiCs/Ex1i7XAMRmyB12519yfS0oHfOEgUdrejSKxuWcv0bY2VCo5jc2skfBgp7UB+g==",
+      "path": "vi.parallelcomputing/1.0.0",
+      "hashPath": "vi.parallelcomputing.1.0.0.nupkg.sha512"
+    },
+    "ILGPU.Reference/0.2.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
