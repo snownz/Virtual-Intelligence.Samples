@@ -1,4 +1,7 @@
 ﻿using System;
+using VI.Neural.Factory;
+using VI.Neural.Node;
+using VI.NumSharp;
 
 namespace MultiLayerPerceptron.EvenOrOdd
 {
@@ -49,63 +52,11 @@ namespace MultiLayerPerceptron.EvenOrOdd
                 .Output()
                 .Build();
 
-            var loss = new SquareLossFunction();
-
             watch = System.Diagnostics.Stopwatch.StartNew();
             watch.Stop();
             Console.WriteLine($"Sinapse Time: {watch.ElapsedMilliseconds}ms");
 
-            var trainingValues = new[]
-            {
-                new[] {0f, 0f, 0f, 0f},
-                new[] {1f, 0f, 0f, 0f},
-                new[] {0f, 1f, 0f, 0f},
-                new[] {0f, 0f, 1f, 0f},
-                new[] {0f, 0f, 0f, 1f},
-                new[] {1f, 0f, 0f, 0f},
-                new[] {1f, 1f, 0f, 0f},
-                new[] {0f, 1f, 1f, 0f},
-                new[] {0f, 0f, 1f, 1f},
-                new[] {0f, 0f, 0f, 1f},
-                new[] {0f, 1f, 0f, 0f},
-                new[] {1f, 0f, 1f, 0f},
-                new[] {0f, 1f, 0f, 1f},
-                new[] {1f, 0f, 1f, 0f},
-                new[] {0f, 1f, 0f, 1f},
-                new[] {0f, 0f, 1f, 0f},
-                new[] {1f, 0f, 0f, 1f},
-                new[] {1f, 1f, 0f, 0f},
-                new[] {0f, 1f, 1f, 0f},
-                new[] {0f, 0f, 1f, 1f},
-                new[] {1f, 1f, 1f, 0f},
-                new[] {1f, 1f, 1f, 1f}
-            };
-
-            var desiredValues = new[]
-            {
-                new[] {1f, 0f},
-                new[] {1f, 0f},
-                new[] {1f, 0f},
-                new[] {1f, 0f},
-                new[] {0f, 1f},
-                new[] {1f, 0f},
-                new[] {1f, 0f},
-                new[] {1f, 0f},
-                new[] {0f, 1f},
-                new[] {0f, 1f},
-                new[] {1f, 0f},
-                new[] {1f, 0f},
-                new[] {0f, 1f},
-                new[] {1f, 0f},
-                new[] {0f, 1f},
-                new[] {1f, 0f},
-                new[] {0f, 1f},
-                new[] {1f, 0f},
-                new[] {1f, 0f},
-                new[] {0f, 1f},
-                new[] {1f, 0f},
-                new[] {0f, 1f}
-            };
+            var (trainingValues, desiredValues) = Data.Get();
 
             int cont = 0;
             int sizeTrain = 10;
@@ -118,26 +69,19 @@ namespace MultiLayerPerceptron.EvenOrOdd
                 e = 0;
                 for (int i = 0; i < sizeTrain; i++)
                 {
-                    var index = i;// rd.Next(0, trainingValues.Length);
+                    var index = i;
                     var inputs = trainingValues[index];
                     var desireds = desiredValues[index];
 
-                    //watch = System.Diagnostics.Stopwatch.StartNew();
                     // Feed Forward
                     var _h = hiddens.Output(inputs);
                     var _h2 = hiddens2.Output(_h);
                     var _o = outputs.Output(_h2);
-                    //watch.Stop();
-                    //Console.WriteLine($"\nForward Time: { watch.ElapsedMilliseconds}ms");
-                    //Thread.Sleep(100);
 
-                    //watch = System.Diagnostics.Stopwatch.StartNew();
                     // Backward
                     var _oe = ((ISupervisedLearning)outputs).Learn(_h2, desireds);
                     var _he2 = ((ISupervisedLearning)hiddens2).Learn(_h, _oe);
                     ((ISupervisedLearning)hiddens).Learn(inputs, _he2);
-                    //watch.Stop();
-                    //Console.WriteLine($"\nBackward Time: { watch.ElapsedMilliseconds}ms");
 
                     // Error
                     var e0 = Math.Abs(_o[0] - desireds[0]);
@@ -151,9 +95,9 @@ namespace MultiLayerPerceptron.EvenOrOdd
                 watch.Stop();
                 var time = watch.ElapsedMilliseconds;
                 Console.WriteLine($"Interactions: {cont}\nError: {e}");
-                //Console.WriteLine($"Interactions: {cont}\nError: {e}\nTime: {time / (double)sizeTrain}ms");
                 Console.Title =
                     $"TSPS (Training Sample per Second): {Math.Ceiling(1000d / ((double)time / (double)sizeTrain))}";
             }
+        }
     }
 }

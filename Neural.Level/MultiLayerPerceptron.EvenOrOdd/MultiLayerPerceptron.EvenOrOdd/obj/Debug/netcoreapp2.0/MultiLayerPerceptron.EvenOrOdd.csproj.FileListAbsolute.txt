@@ -1,0 +1,15 @@
+C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\MultiLayerPerceptron.EvenOrOdd\MultiLayerPerceptron.EvenOrOdd\bin\Debug\netcoreapp2.0\MultiLayerPerceptron.EvenOrOdd.deps.json
+C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\MultiLayerPerceptron.EvenOrOdd\MultiLayerPerceptron.EvenOrOdd\bin\Debug\netcoreapp2.0\MultiLayerPerceptron.EvenOrOdd.runtimeconfig.json
+C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\MultiLayerPerceptron.EvenOrOdd\MultiLayerPerceptron.EvenOrOdd\bin\Debug\netcoreapp2.0\MultiLayerPerceptron.EvenOrOdd.runtimeconfig.dev.json
+C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\MultiLayerPerceptron.EvenOrOdd\MultiLayerPerceptron.EvenOrOdd\bin\Debug\netcoreapp2.0\MultiLayerPerceptron.EvenOrOdd.dll
+C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\MultiLayerPerceptron.EvenOrOdd\MultiLayerPerceptron.EvenOrOdd\obj\Debug\netcoreapp2.0\MultiLayerPerceptron.EvenOrOdd.csprojResolveAssemblyReference.cache
+C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\MultiLayerPerceptron.EvenOrOdd\MultiLayerPerceptron.EvenOrOdd\obj\Debug\netcoreapp2.0\MultiLayerPerceptron.EvenOrOdd.csproj.CoreCompileInputs.cache
+C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\MultiLayerPerceptron.EvenOrOdd\MultiLayerPerceptron.EvenOrOdd\obj\Debug\netcoreapp2.0\MultiLayerPerceptron.EvenOrOdd.AssemblyInfoInputs.cache
+C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\MultiLayerPerceptron.EvenOrOdd\MultiLayerPerceptron.EvenOrOdd\obj\Debug\netcoreapp2.0\MultiLayerPerceptron.EvenOrOdd.AssemblyInfo.cs
+C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\MultiLayerPerceptron.EvenOrOdd\MultiLayerPerceptron.EvenOrOdd\bin\Debug\netcoreapp2.0\X86\Windows\ILGPU_LLVM.dll
+C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\MultiLayerPerceptron.EvenOrOdd\MultiLayerPerceptron.EvenOrOdd\bin\Debug\netcoreapp2.0\X64\Windows\ILGPU_LLVM.dll
+C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\MultiLayerPerceptron.EvenOrOdd\MultiLayerPerceptron.EvenOrOdd\bin\Debug\netcoreapp2.0\ILGPU.dll
+C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\MultiLayerPerceptron.EvenOrOdd\MultiLayerPerceptron.EvenOrOdd\bin\Debug\netcoreapp2.0\ILGPU.xml
+C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\MultiLayerPerceptron.EvenOrOdd\MultiLayerPerceptron.EvenOrOdd\bin\Debug\netcoreapp2.0\MultiLayerPerceptron.EvenOrOdd.pdb
+C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\MultiLayerPerceptron.EvenOrOdd\MultiLayerPerceptron.EvenOrOdd\obj\Debug\netcoreapp2.0\MultiLayerPerceptron.EvenOrOdd.dll
+C:\Projects\GitHub\Virtual-Intelligence.Samples\Neural.Level\MultiLayerPerceptron.EvenOrOdd\MultiLayerPerceptron.EvenOrOdd\obj\Debug\netcoreapp2.0\MultiLayerPerceptron.EvenOrOdd.pdb
