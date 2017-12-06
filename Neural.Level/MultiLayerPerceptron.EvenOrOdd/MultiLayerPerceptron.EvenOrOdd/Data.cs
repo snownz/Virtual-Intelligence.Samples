@@ -20,12 +20,12 @@ namespace MultiLayerPerceptron.EvenOrOdd
 
             for (int i = 0; i < inputString.Count; i++)
             {
-                inputs[i] = inputString[i].Split(';').Select(x => float.Parse(x)).ToArray();
+                inputs[i] = inputString[i].Split(',').Select(x => float.Parse(x)).ToArray();
             }
 
             for (int i = 0; i < outputString.Count; i++)
             {
-                outputs[i] = outputString[i].Split(';').Select(x => float.Parse(x)).ToArray();
+                outputs[i] = outputString[i].Split(',').Select(x => float.Parse(x)).ToArray();
             }
 
             return (inputs, outputs);
