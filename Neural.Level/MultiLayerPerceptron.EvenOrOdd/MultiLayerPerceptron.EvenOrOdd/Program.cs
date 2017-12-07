@@ -20,17 +20,6 @@ namespace MultiLayerPerceptron.EvenOrOdd
             Console.WriteLine($"Device Time: {watch.ElapsedMilliseconds}ms");
 
             var hiddens = new LayerCreator(2, 4)
-                            .WithLearningRate(values[0])
-                            .WithMomentum(0)
-                            .FullSynapse()
-                            .Supervised()
-                            .DenseLayer()
-                            .WithLeakRelu()
-                            .WithSgd()
-                            .Hidden()
-                            .Build();
-
-            var hiddens2 = new LayerCreator(2, 2)
                 .WithLearningRate(values[0])
                 .WithMomentum(0)
                 .FullSynapse()
@@ -39,7 +28,7 @@ namespace MultiLayerPerceptron.EvenOrOdd
                 .WithLeakRelu()
                 .WithSgd()
                 .Hidden()
-                .Build();
+                .Build();          
 
             var outputs = new LayerCreator(2, 2)
                 .WithLearningRate(values[0])
@@ -75,18 +64,16 @@ namespace MultiLayerPerceptron.EvenOrOdd
 
                     // Feed Forward
                     var _h = hiddens.Output(inputs);
-                    var _h2 = hiddens2.Output(_h);
-                    var _o = outputs.Output(_h2);
+                    var _o = outputs.Output(_h);
 
                     // Backward
-                    var _oe = ((ISupervisedLearning)outputs).Learn(_h2, desireds);
-                    var _he2 = ((ISupervisedLearning)hiddens2).Learn(_h, _oe);
-                    ((ISupervisedLearning)hiddens).Learn(inputs, _he2);
+                    var _oe = ((ISupervisedLearning)outputs).Learn(_h, desireds);
+                    ((ISupervisedLearning)hiddens).Learn(inputs, _oe);
 
                     // Error
                     var e0 = Math.Abs(_o[0] - desireds[0]);
                     var e1 = Math.Abs(_o[1] - desireds[1]);
-                    var error = Math.Sqrt(Math.Abs(e0 * e0 + e1 * e0));
+                    var error = Math.Sqrt(Math.Abs(e0 * e0 + e1 * e1));
                     e += error / 2.0;
                 }
 
