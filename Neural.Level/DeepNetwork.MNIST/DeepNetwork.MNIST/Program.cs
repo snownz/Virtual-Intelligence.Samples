@@ -19,7 +19,7 @@ namespace DeepNetwork.MNIST
             watch.Stop();
             Console.WriteLine($"Device Time: {watch.ElapsedMilliseconds}ms");
 
-            var hiddens = new LayerCreator(30, 784)
+            var hiddens = new LayerCreator(100, 784)
                 .WithLearningRate(values[0])
                 .FullSynapse(.01f)
                 .Supervised()
@@ -29,7 +29,7 @@ namespace DeepNetwork.MNIST
                 .Hidden()
                 .Build();
 
-            var hiddens2 = new LayerCreator(10, 30)
+            var hiddens2 = new LayerCreator(50, 100)
                 .WithLearningRate(values[0])
                 .FullSynapse(.01f)
                 .Supervised()
@@ -39,7 +39,7 @@ namespace DeepNetwork.MNIST
                 .Hidden()
                 .Build();
 
-            var outputs = new LayerCreator(10, 10)
+            var outputs = new LayerCreator(10, 50)
                 .WithLearningRate(values[0])
                 .FullSynapse(.01f)
                 .Supervised()
